@@ -1,0 +1,3 @@
+include keywords_b2b/*.py
+include LICENSE
+include README.rst
