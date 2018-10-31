@@ -58,6 +58,7 @@ def main(a):
 
     parser.add_argument(r'input', type=str, help=r'Keywords file')
     parser.add_argument(r'--encoding', r'-c', type=check_encoding, default=r'utf-8', help=r'Work files encoding')
+    parser.add_argument(r'--version', r'-v', action=r'version', version='%(prog) ' +  __version__)
 
     args = parser.parse_args(a)
     
