@@ -20,7 +20,7 @@ import codecs
 import argparse
 import sys
 from .keywords_b2b import parse
-from . import __version__, __copyright__
+from . import __version__, __copyright__, __name__ as __base_name__
 
 class ArgumentParser(argparse.ArgumentParser):    
     def _get_action_from_name(self, name):
@@ -51,13 +51,14 @@ def check_encoding(enc):
 def main(a):
     vers = r'Version ' + __version__ + r', ' + __copyright__
     parser = ArgumentParser(add_help = True,
-                                    prog = r'keywords_b2b',
+                                    prog = __base_name__,
                                     formatter_class = argparse.RawDescriptionHelpFormatter,
                                     description = r'Generate keywords combinations',
                                     epilog = vers)
 
     parser.add_argument(r'input', type=str, help=r'Keywords file')
     parser.add_argument(r'--encoding', r'-c', type=check_encoding, default=r'utf-8', help=r'Work files encoding')
+    parser.add_argument(r'--version', r'-v', action=r'version', version='%(prog) ' +  __version__)
 
     args = parser.parse_args(a)
     
