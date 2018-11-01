@@ -16,3 +16,19 @@ Generate keywords csv file for context advertising by input file in next format:
     [...]
     
   [...]
+
+Usage in console:
+
+    usage: keywords_b2b [-h] [--encoding ENCODING] input
+
+    Generate keywords combinations
+
+    positional arguments:
+      input                 Keywords file
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      --encoding ENCODING, -c ENCODING
+                            Work files encoding
+
+    Version 0.1.0a0, Copyright 2018, SigDev
