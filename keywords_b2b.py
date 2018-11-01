@@ -17,7 +17,6 @@ r''' Copyright 2018, SigDev
 
 import sys
 import os
-import keywords_b2b
 from keywords_b2b.__main__ import main
 
 if __name__ == r'__main__':
